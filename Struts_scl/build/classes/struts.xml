@@ -4,6 +4,12 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	<package name="ognl" extends="struts-default">
+		<action name="Ognl" class="struts_ognl.struts2ognl.OgnlAction">
+			<result name="success">/ognl.jsp</result>
+		</action>
+	</package>
+
 	<!-- package 包名区分不同模块，名称唯一，可以继承父类package，包含多个控制器action -->
 	<package name="default" extends="struts-default">
 		<!-- action控制器配置 name url地址与页面form中的action对应 -->
@@ -21,6 +27,6 @@
 			<result name="success">/login/success.jsp</result>
 			<result name="error">/login/error.jsp</result>
 		</action>
-		
 	</package>
+	
 </struts>
