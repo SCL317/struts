@@ -28,5 +28,15 @@
 			<result name="error">/login/error.jsp</result>
 		</action>
 	</package>
-	
+
+	<package name="default1" extends="struts-default">
+		<!-- 这里的*代表通配符匹配识别Register结尾的 method={1}中的1表示匹配到的*的内容 
+		比如populateRegister.action则这里的*表示为populate -->
+		<action name="*Register" method="{1}" class="Struts2_UItags.RegisterAction">
+			<result name="input">/register.jsp</result>
+			<result name="populate">/register.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+	</package>
+
 </struts>
