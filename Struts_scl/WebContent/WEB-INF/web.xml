@@ -3,7 +3,6 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
-	<display-name>Struts_start</display-name>
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
@@ -12,38 +11,26 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<display-name>Struts_Annotation</display-name>
+	<welcome-file-list>
+		<welcome-file>indexAnnotation.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<display-name>Struts_start</display-name>
 	<welcome-file-list>
 		<welcome-file>login/login.jsp</welcome-file>
 	</welcome-file-list>
-	
+
 
 	<display-name>Struts_Ognl</display-name>
-	<filter>
-		<filter-name>struts3</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>struts3</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	
+
 	<display-name>Struts_UItags</display-name>
-<!-- 配置项目启动后的默认首页 -->
 	<welcome-file-list>
 		<welcome-file>indexUItags.jsp</welcome-file>
 	</welcome-file-list>
-<!-- 	配置struts2的装备与执行过滤器 -->
-	
-	<filter>
-		<filter-name>struts4</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>struts4</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+
 </web-app>
